@@ -1,0 +1,23 @@
+{
+  "name": "application",
+  "version": "1.0.0",
+  "description": "# 1 - All simply static",
+  "main": "vibe.js",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philhawksworth/fcc-1-simply-static.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philhawksworth/fcc-1-simply-static/issues"
+  },
+  "homepage": "https://github.com/philhawksworth/fcc-1-simply-static#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
