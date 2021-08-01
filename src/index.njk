@@ -9,10 +9,15 @@ layout: base.njk
     You are great!
   </div>
 
-
-  <ul>
-    {% for articles in news.articles %}
-      <li>{{ articles.title }}</li>
+  <ul class="news">
+    {% for article in news.articles %}
+      <li>
+      <h2>{{ article.title }}</h2>
+        <p>
+          link: <a href="{{ article.url }}">{{ article.url }}</a>
+        </p>
+        <span>{{ article.source.name }} - <time>{{ article.publishedAt }}</time></span>
+      </li>
     {% endfor %}
   </ul>
 </div>
