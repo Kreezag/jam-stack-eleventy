@@ -1,0 +1,16 @@
+{
+  "articles" : [
+    {
+      "title": "New article 1"
+    },
+    {
+      "title": "New article 2"
+    },
+    {
+      "title": "New article 3"
+    },
+    {
+      "title": "New article 4"
+    }
+  ]
+}

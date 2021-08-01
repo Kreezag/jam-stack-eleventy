@@ -8,8 +8,12 @@ layout: base.njk
   <div class="vibe">
     You are great!
   </div>
-  <div class="love">
-    ❤️
-  </div>
+
+
+  <ul class="love">
+    {% for articles in news.articles %}
+      <li>{{ articles.title }}</li>
+    {% endfor %}
+  </ul>
 </div>
 <script src="js/vibe.js"></script>
