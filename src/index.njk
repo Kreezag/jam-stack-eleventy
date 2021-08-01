@@ -14,7 +14,7 @@ permalink: /{{ news.country }}/index.html
     You are great!
   </div>
 
-
+{% if news %}
   <ul class="news">
     {% for article in news.articles %}
       <li>
@@ -26,5 +26,6 @@ permalink: /{{ news.country }}/index.html
       </li>
     {% endfor %}
   </ul>
+{% endif %}
 </div>
 <script src="js/vibe.js"></script>
