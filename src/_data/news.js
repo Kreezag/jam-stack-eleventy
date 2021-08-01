@@ -1,13 +1,23 @@
 const axios = require('axios')
+const countries = require('./countries.json')
 require('dotenv').config()
 
-module.exports = async function () {
+async function getCountryNews (country) {
   try {
-    const result = await axios.get(`https://newsapi.org/v2/top-headlines?country=us&sortBy=publishedAt&apiKey=${process.env.NEXS_API_KEY}&pageSize=5`)
+    const result = await axios.get(`https://newsapi.org/v2/top-headlines?country=${country}&sortBy=publishedAt&apiKey=${process.env.NEXS_API_KEY}&pageSize=5`)
     
-    return result.data;
+    return {
+      country,
+      articles: result.data.articles
+    };
   } catch (e) {
     console.error(e)
   }
 }
 
+module.exports = async function () {
+  return Promise.all(countries.map(getCountryNews)).then((result) => {
+    console.log('result:', result)
+    return Array.from(result)
+  })
+}

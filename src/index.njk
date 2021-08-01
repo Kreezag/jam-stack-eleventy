@@ -10,7 +10,7 @@ layout: base.njk
   </div>
 
   <ul class="news">
-    {% for article in news.articles %}
+    {% for article in news[0].articles %}
       <li>
       <h2>{{ article.title }}</h2>
         <p>
