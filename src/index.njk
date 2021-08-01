@@ -1,6 +1,11 @@
 ---
-title: A page for you
+title: Daily Breifing
 layout: base.njk
+pagination:
+  data: news
+  size: 1
+  alias: news
+permalink: /{{ news.country }}/index.html
 ---
 
 <div class="container">
@@ -9,8 +14,9 @@ layout: base.njk
     You are great!
   </div>
 
+
   <ul class="news">
-    {% for article in news[0].articles %}
+    {% for article in news.articles %}
       <li>
       <h2>{{ article.title }}</h2>
         <p>
