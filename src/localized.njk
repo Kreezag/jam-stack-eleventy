@@ -9,23 +9,19 @@ permalink: /{{ news.country }}/index.html
 ---
 
 <div class="container">
-  <h1>This is a page for you</h1>
-  <div class="vibe">
-    You are great!
-  </div>
+  <h1>This is a localized page</h1>
 
-{% if news %}
-  <ul class="news">
-    {% for article in news.articles %}
-      <li>
-      <h2>{{ article.title }}</h2>
-        <p>
-          link: <a href="{{ article.url }}">{{ article.url }}</a>
-        </p>
-        <span>{{ article.source.name }} - <time>{{ article.publishedAt }}</time></span>
-      </li>
-    {% endfor %}
-  </ul>
-{% endif %}
+  {% if news %}
+    <ul class="news">
+      {% for article in news.articles %}
+        <li>
+          <h2>{{ article.title }}</h2>
+          <p>
+            link: <a href="{{ article.url }}">{{ article.url }}</a>
+          </p>
+          <span>{{ article.source.name }} - <time>{{ article.publishedAt }}</time></span>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 </div>
-<script src="js/vibe.js"></script>

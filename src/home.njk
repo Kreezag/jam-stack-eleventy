@@ -1,15 +1,17 @@
 ---
-title: About page for you
+title: Daily Breifing
 layout: base.njk
+permalink: index.html
 ---
 
 <div class="container">
-  <h1>The page is About</h1>
-  <div class="love">
-    ❤️
+  <h1>This is a page for you</h1>
+  <div class="vibe">
+    You are great!
   </div>
 
   {% for item in news %}
     <a href="/{{ item.country}}">{{ item.country }}</a>
   {%  endfor %}
 </div>
+<script src="js/vibe.js"></script>
