@@ -1,4 +1,11 @@
 module.exports = (config) => {
+  config.setBrowserSyncConfig({
+    https: {
+      key: '/etc/localhost.key',
+      cert: '/etc/localhost.cert'
+    }
+  });
+  
   config.addPassthroughCopy("src/js")
   
   return {
